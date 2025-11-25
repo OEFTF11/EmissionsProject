@@ -1,32 +1,25 @@
-# EmissionsDashboard  
-A full-stack emissions reporting dashboard built with **Angular** (frontend) and **ASP.NET Core Web API** (backend).  
+EmissionsDashboard
+A full-stack emissions reporting dashboard built with Angular (frontend) and ASP.NET Core Web API (backend).
 The project demonstrates real-world application architecture, API integration, UI filtering, and modular component design — aligned with requirements for professional software engineering roles.
 
----
+📌 Technologies Used
+Frontend – Angular
+Angular 17+
+TypeScript
+HTML / CSS
+Angular Router
+Angular Components & Services
+HttpClient for API calls
 
-## 📌 **Technologies Used**
+Backend – .NET 8 Web API
+ASP.NET Core
+Controllers, Models, Dependency Injection
+C#
+REST API architecture
+Local development server
 
-### **Frontend – Angular**
-- Angular 17+
-- TypeScript
-- HTML / CSS
-- Angular Router
-- Angular Components & Services
-- HttpClient for API calls
-
-### **Backend – .NET 8 Web API**
-- ASP.NET Core
-- Controllers, Models, Dependency Injection
-- C#
-- REST API architecture
-- Local development server
-
----
-
-## 🚀 **How to Run the Project**
-
-### **1. Start the Backend**
-```bash
+🚀 How to Run the Project
+1. Start the Backend
 cd EmissionsBackend/Emissions.Api
 dotnet run
 http://localhost:5067/swagger/index.html
@@ -116,14 +109,15 @@ Why This Project Matches the Ecology Job Requirements
 
 Job Requirement → Demonstrated in this project
 
-Requirement	Demonstrated
-Front-end development with HTML, CSS, Angular	✔ Angular 17 app using components, services, templates, custom CSS
-Back-end development using .NET Core / ASP.NET	✔ Web API in .NET 8 with routing, models, controllers
-REST API experience	✔ Front-end calls /emissions endpoint
-Database knowledge (mocked)	✔ Data modeled like SQL rows and returned as structured JSON
-Version control (Git/GitHub)	✔ Full repository with commit history
-Moderate-risk application design	✔ Clean architecture, typed models, stable JSON contracts
-Ability to integrate front-end and API	✔ Full stack integration demonstrated end-to-end
+Requirement    Demonstrated
+Front-end development with HTML, CSS, Angular    ✔ Angular 17 app using components, services, templates, custom CSS
+Back-end development using .NET Core / ASP.NET  ✔ Web API in .NET 8 with routing, models, controllers
+REST API experience                             ✔ Front-end calls /emissions endpoint
+Database knowledge (mocked)                     ✔ Data modeled like SQL rows and returned as structured JSON
+Version control (Git/GitHub)                    ✔ Full repository with commit history
+Moderate-risk application design                ✔ Clean architecture, typed models, stable JSON contracts
+Ability to integrate front-end and API          ✔ Full stack integration demonstrated end-to-end
+
 Future Enhancements
 
 If expanded, the next steps would be:
