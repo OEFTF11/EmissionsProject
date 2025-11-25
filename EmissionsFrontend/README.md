@@ -1,59 +1,147 @@
-# EmissionsDashboard
+# EmissionsDashboard  
+A full-stack emissions reporting dashboard built with **Angular** (frontend) and **ASP.NET Core Web API** (backend).  
+The project demonstrates real-world application architecture, API integration, UI filtering, and modular component design — aligned with requirements for professional software engineering roles.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+---
 
-## Development server
+## 📌 **Technologies Used**
 
-To start a local development server, run:
+### **Frontend – Angular**
+- Angular 17+
+- TypeScript
+- HTML / CSS
+- Angular Router
+- Angular Components & Services
+- HttpClient for API calls
 
+### **Backend – .NET 8 Web API**
+- ASP.NET Core
+- Controllers, Models, Dependency Injection
+- C#
+- REST API architecture
+- Local development server
+
+---
+
+## 🚀 **How to Run the Project**
+
+### **1. Start the Backend**
 ```bash
-ng serve
-```
+cd EmissionsBackend/Emissions.Api
+dotnet run
+http://localhost:5067/swagger/index.html
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. Start the Frontend
+cd EmissionsFrontend
+ng serve --open
+http://localhost:4200/
 
-## Code scaffolding
+🏗️ Project Structure
+Angular Frontend
+/src
+  /app
+    /emissions-list
+      emissions-list.ts
+      emissions-list.html
+      emissions-list.css
+    app.routes.ts
+    app.config.ts
+/Controllers
+/Models
+Program.cs
+appsettings.json
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+📊 Application Screenshots
+Dashboard – Main View
 
-```bash
-ng generate component component-name
-```
+Shows total facility emissions aggregated in a formatted list.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Dashboard – Continued View
 
-```bash
-ng generate --help
-```
+Scrollable list & extended UI section.
 
-## Building
+Facility Filter
 
-To build the project run:
+User can filter emissions data per facility.
 
-```bash
-ng build
-```
+Backend Running
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+ASP.NET API running successfully.
 
-## Running unit tests
+Frontend + Backend Working Together
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Both services running with connected API calls.
 
-```bash
+![Both Running](Screenshots/frontend + backend running.png)
+
+📚 Features Implemented
+
+Angular component-driven UI
+
+REST API consumption using HttpClient
+
+Clean project structure following Angular best practices
+
+ASP.NET Core Web API delivering emission data
+
+CSS-styled emissions dashboard
+
+Local environment configured with matching Olympia, WA areas (for realism)
+
+🧪 Testing
+
+Angular testing:
+
 ng test
-```
 
-## Running end-to-end tests
+📌 Summary
 
-For end-to-end (e2e) testing, run:
+This full-stack application demonstrates:
 
-```bash
-ng e2e
-```
+Experience with Angular, HTML, CSS
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Backend development with ASP.NET Core (.NET 8)
 
-## Additional Resources
+REST API design & integration
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Practical full-stack project architecture
+
+Realistic municipal use-case (City of Olympia emissions)
+
+📎 Contact
+
+If you have questions or need more details about the implementation, feel free to reach out.
+
+Why This Project Matches the Ecology Job Requirements
+
+Job Requirement → Demonstrated in this project
+
+Requirement	Demonstrated
+Front-end development with HTML, CSS, Angular	✔ Angular 17 app using components, services, templates, custom CSS
+Back-end development using .NET Core / ASP.NET	✔ Web API in .NET 8 with routing, models, controllers
+REST API experience	✔ Front-end calls /emissions endpoint
+Database knowledge (mocked)	✔ Data modeled like SQL rows and returned as structured JSON
+Version control (Git/GitHub)	✔ Full repository with commit history
+Moderate-risk application design	✔ Clean architecture, typed models, stable JSON contracts
+Ability to integrate front-end and API	✔ Full stack integration demonstrated end-to-end
+Future Enhancements
+
+If expanded, the next steps would be:
+
+Replace mock data with a SQL Server database
+
+Add user authentication & role permissions
+
+Add data export from the API
+
+Implement filtering on the API instead of the client
+
+Add map visualization using ArcGIS or Leaflet
+
+Author
+
+Jesse McClure
+Full-stack software engineering student, Graduate with a BS in Computer Science on December, 12th 2025.
+Email: jesse.mcclure@aol.com; jmc1252@wgu.edu
+GitHub: https://github.com/OEFTF11
+
