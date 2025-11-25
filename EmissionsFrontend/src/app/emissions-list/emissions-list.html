@@ -1,0 +1,124 @@
+<h1>Facility Emissions Dashboard</h1>
+
+<!-- FILTER -->
+<label>
+  Filter by Source Type:
+  <select [(ngModel)]="selectedSource" (change)="onSourceChange(selectedSource)">
+    <option value="All">All</option>
+    <option value="Transportation">Transportation</option>
+    <option value="Electricity">Electricity</option>
+    <option value="Boilers">Boilers</option>
+  </select>
+</label>
+
+<br /><br />
+
+<!-- KPI CARDS -->
+<div class="kpi-row">
+  <div class="kpi-card">
+    <div class="kpi-label">Facilities in view</div>
+    <div class="kpi-value">{{ facilityCount }}</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">Total CO₂ (tons/year)</div>
+    <div class="kpi-value">{{ totalCo2 | number:'1.0-0' }}</div>
+  </div>
+</div>
+
+<br />
+
+<!-- TOP 3 EMITTERS (TOP SECTION) -->
+<div class="top-emitters" *ngIf="topEmitters.length">
+  <div class="top-emitters-title">
+    <strong>Top 3 Emission Emitters (by CO₂ in view)</strong>
+  </div>
+  <ol>
+    <li *ngFor="let e of topEmitters">
+      <span class="emitter-name">{{ e.facility }}</span>
+      <span class="emitter-value">
+        {{ e.totalCo2 | number:'1.0-0' }} tons CO₂
+      </span>
+    </li>
+  </ol>
+</div>
+
+<br />
+
+<!-- FACILITY CARDS -->
+<div class="facility-cards">
+  <div
+    class="facility-card"
+    *ngFor="let card of kpiCards"
+    [class.selected]="selectedFacility === card.facility"
+    (click)="selectFacility(card)"
+  >
+    <div class="facility-name">{{ card.facility }}</div>
+    <div class="facility-co2">
+      {{ card.totalCo2 | number:'1.0-0' }} tons CO₂
+    </div>
+  </div>
+</div>
+
+<br />
+
+<!-- EXPORT BUTTONS -->
+<div class="export-actions">
+  <button (click)="exportChartAsPdf()">Export chart as PDF</button>
+  <button (click)="exportDataAsJson()">Export data as JSON</button>
+  <button (click)="exportDataAsCsv()">Export data as CSV</button>
+</div>
+
+<br />
+
+<!-- BAR CHART -->
+<div #chartContainer style="height: 300px;">
+  <canvas
+    baseChart
+    [data]="barChartData"
+    [options]="barChartOptions"
+    [type]="'bar'"
+  ></canvas>
+</div>
+
+<br />
+
+<!-- TABLE -->
+<h2>City of Olympia Emissions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Facility</th>
+      <th>Source Type</th>
+      <th>CO₂ (tons/year)</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let f of filteredFacilities">
+      <td>{{ f.facility }}</td>
+      <td>{{ f.sourceType }}</td>
+      <td>{{ f.co2TonsPerYear | number:'1.0-0' }}</td>
+      <td>{{ f.year }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<!-- TOP 3 EMITTERS (BOTTOM SECTION) -->
+<div class="top-emitters bottom-top-emitters" *ngIf="topEmitters.length">
+  <div class="top-emitters-title">
+    <strong>Top 3 Emission Emitters (by CO₂ in view)</strong>
+  </div>
+  <ol>
+    <li *ngFor="let e of topEmitters">
+      <span class="emitter-name">{{ e.facility }}</span>
+      <span class="emitter-value">
+        {{ e.totalCo2 | number:'1.0-0' }} tons CO₂
+      </span>
+    </li>
+  </ol>
+</div>

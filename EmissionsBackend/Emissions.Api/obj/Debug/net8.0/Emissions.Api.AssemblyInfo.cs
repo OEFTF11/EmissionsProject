@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emissions.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f382b5849cb838d818df477d16bc7f0be3a2d827")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emissions.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emissions.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

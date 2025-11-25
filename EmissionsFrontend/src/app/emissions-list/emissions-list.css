@@ -1,0 +1,176 @@
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+}
+
+th {
+  background-color: #f3f3f3;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* KPI cards */
+.kpis {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.kpi-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.kpi-card {
+  border: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  min-width: 180px;
+  background-color: #fafafa;
+}
+
+.kpi-label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.kpi-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Export buttons */
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.export-actions button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.export-actions button:hover:not(:disabled) {
+  background-color: #e8e8e8;
+  border-color: #999;
+}
+
+.export-actions button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* Facility cards */
+.facility-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.facility-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  min-width: 220px;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.facility-card:hover {
+  border-color: #888;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card.selected {
+  border-color: #0078d4;
+  background-color: #e8f2ff;
+  box-shadow: 0 0 0 1px #0078d4;
+}
+
+.facility-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.facility-co2 {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Highlight selected facility rows in main table */
+.selected-row {
+  background-color: #fff8e1;
+}
+
+/* Top emitters block */
+.top-emitters {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  max-width: 420px;
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.top-emitters-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.top-emitters ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.top-emitters li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.emitter-name {
+  margin-right: 0.75rem;
+}
+
+.emitter-value {
+  font-weight: 600;
+}
+
+/* extra spacing for the bottom block */
+.bottom-top-emitters {
+  margin-top: 0.75rem;
+}
