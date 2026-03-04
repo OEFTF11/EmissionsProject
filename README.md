@@ -137,4 +137,5 @@ Author
 Jesse McClure
 Full-stack software engineering student, Graduate with a BS in Computer Science on December, 12th 2025.
 Email: jesse.mcclure.dev@gmail.com
-GitHub: https://github.com/OEFTF11
+LinkedIn: https://www.linkedin.com/in/jesse-mcclure/
+GitHub: https://github.com/JDM-Developer
